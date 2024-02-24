@@ -1,8 +1,8 @@
-import { PRODUCTS_URL } from "../config/config"
+import { API_URL } from "../config/config"
 import { buildUri } from "../utils/uriBuilder"
 import { revalidate } from "../utils/constants"
 
-const getProductEndpoint = (id: string = "", path: string = ""): string => PRODUCTS_URL + "/products" + path + `${id !== "" ? "/" + id : ""}`
+const getProductEndpoint = (id: string = "", path: string = ""): string => API_URL + "/products" + path + `${id !== "" ? "/" + id : ""}`
 
 export const getProductByID = async (id: string) => {
     try {
