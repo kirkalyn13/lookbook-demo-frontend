@@ -1,7 +1,9 @@
-export default function Home() {
+import Gallery from "./components/Gallery/Gallery";
+
+export default async function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Look Book Demo App</h1>
+    <main className="container flex min-h-screen flex-col items-center justify-between p-8">
+      <Gallery />
     </main>
   );
 }

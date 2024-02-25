@@ -1,10 +1,19 @@
+import { getProducts } from '@/app/services/productService'
 import GalleryItem from './GalleryItem/GalleryItem'
 
-const Gallery: React.FC = () => {
+const Gallery: React.FC = async () => {
+  const products = await getProducts() ?? []
+  console.log(products)
+
   return (
-    <div>
-        <GalleryItem />
-    </div>
+    <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 space-y-4">
+        {products.map((product: Product) => <GalleryItem 
+          key={product.id}
+          src={product.thumbnail}
+          title={product.title}
+          description={product.description}
+          />)}
+    </section>
   )
 }
 
