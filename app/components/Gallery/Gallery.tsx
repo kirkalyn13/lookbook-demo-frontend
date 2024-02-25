@@ -2,8 +2,7 @@ import { getProducts } from '@/app/services/productService'
 import GalleryItem from './GalleryItem/GalleryItem'
 
 const Gallery: React.FC = async () => {
-  const products = await getProducts() ?? []
-  console.log(products)
+  const products = await getProducts()
 
   return (
     <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4 space-y-4">
