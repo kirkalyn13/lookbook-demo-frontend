@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Products",
-  description: "LookBook Demo App using Next JS",
+  description: "LookBook Demo Products Catalog",
 };
 
 export default function RootLayout({
