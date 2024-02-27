@@ -4,9 +4,14 @@ import { revalidate } from "../utils/constants"
 
 const getProductEndpoint = (id: string = "", path: string = ""): string => API_URL + "/products" + path + `${id !== "" ? "/" + id : ""}`
 
-export const getProducts = async () => {
+export const getProducts = async (q: string, skip: number, limit: number) => {
     try {
-        const res = await fetch(buildUri(getProductEndpoint()), revalidate)  
+        const queryParams = {
+            q,
+            skip,
+            limit
+        }
+        const res = await fetch(buildUri(getProductEndpoint("", "/search"), queryParams), revalidate)  
         return await res.json() 
     } catch (err) {
         console.error(err)
