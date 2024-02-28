@@ -44,9 +44,9 @@ const Header: React.FC = () => {
             </div>
 
             { showMenu ?
-                (<ul className="space-y-2 text-center mt-4">
-                    <li><Link href={home} className="text-center mb-4 md: mb-0 md:ms-4 text-md">{HOME}</Link></li>
-                    <li><Link href={products} className="text-center mb-4 md: mb-0 md:ms-4 text-md">{PRODUCTS}</Link></li>
+                (<ul className="w-full space-y-2 text-center mt-4">
+                    <li><Link href={home} className="text-center mb-4 md: mb-0 text-md">{HOME}</Link></li>
+                    <li><Link href={products} className="text-center mb-4 md: mb-0 text-md">{PRODUCTS}</Link></li>
                 </ul>)
             : null }
 
