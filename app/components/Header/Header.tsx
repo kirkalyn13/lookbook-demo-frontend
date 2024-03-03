@@ -31,7 +31,7 @@ const Header: React.FC = () => {
 
                 <div className="md:hidden flex justify-center align-center">
                     <button 
-                        className="text-black"
+                        className="text-blue-900"
                         onClick={() => setShowMenu(!showMenu)}>
                         <BiMenu className="text-4xl"/>
                     </button>
