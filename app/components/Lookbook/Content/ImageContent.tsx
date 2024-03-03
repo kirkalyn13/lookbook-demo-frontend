@@ -7,7 +7,7 @@ interface ImageContentProps {
 const ImageContent = ({ article }: ImageContentProps) => {
   return (
     <div className="flex flex-col justify-center align-center my-16 mx-2 md:mx-8">
-        <h3 className="w-full text-center font-bold text-xl my-4">{article.title}</h3>
+        <h3 className="w-full text-center text-2xl text-blue-900 my-4">{article.title}</h3>
         <div className='w-full flex justify-center align-center'>
             <Image
                 src={article.images[0].url}
