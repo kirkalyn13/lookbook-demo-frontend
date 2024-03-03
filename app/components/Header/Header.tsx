@@ -26,12 +26,12 @@ const Header: React.FC = () => {
             md:flex-row md:justify-between">
             <div className="w-full flex flex-wrap justify-between align-center">
                 <Link href={home}>
-                    <h1 className="text-center items-center md:ms-4 text-3xl">{TITLE}</h1>
+                    <h1 className="text-center font-bold items-center md:ms-4 text-3xl">{TITLE}</h1>
                 </Link>
 
                 <div className="md:hidden flex justify-center align-center">
                     <button 
-                        className="text-black"
+                        className="text-blue-900"
                         onClick={() => setShowMenu(!showMenu)}>
                         <BiMenu className="text-4xl"/>
                     </button>
